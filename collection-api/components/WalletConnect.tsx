@@ -12,7 +12,7 @@ declare global {
     }
 }
 
-const isDev: boolean = process.env.NODE_ENV == 'development';
+const isDev: boolean = process.env.NODE_ENV == 'development' ||  process.env.NEXT_PUBLIC_FORCE_DEV == '1';
 
 const signMsg = `Sign this message to validate your wallet\nDomain: test.com\nBlockchain: Bitcoin`;
 

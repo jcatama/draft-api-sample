@@ -26,7 +26,7 @@ export default function Home() {
     const [gasOpt, setGasOpt]: any = useState(0);
     const [order, setOrder]: any = useState(null);
     const [paymentStatus, setPaymentStatus] = useState(false);
-    const isDev: boolean = process.env.NODE_ENV == 'development';
+    const isDev: boolean = process.env.NODE_ENV == 'development' || process.env.NEXT_PUBLIC_FORCE_DEV == '1';
 
     const [collection, setCollection] = useState({
         mint_stage: 'DISABLED',
